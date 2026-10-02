@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نسخ رسالة دعم Canvas - سامر السعدني</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'Inter', 'sans-serif'],
+                        en: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        canvas: {
+                            50: '#f0fdfa',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+        .en-text {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+            text-align: left;
+        }
+        .toast {
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+    </style>
+</head>
+<body class="text-slate-800 flex flex-col justify-between p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto w-full">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <div class="inline-flex items-center justify-center p-3 bg-blue-600 text-white rounded-2xl shadow-lg mb-4">
+                <i class="fa-solid fa-graduation-cap text-3xl"></i>
+            </div>
+            <h1 class="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+                طلب دعم منصة Canvas
+            </h1>
+            <p class="text-slate-600 text-sm md:text-base max-w-lg mx-auto">
+                اختر اللغة المطلوبة ثم اضغط على زر النسخ لاستخدام النص مباشرة في بريد الدعم الفني.
+            </p>
+        </header>
+
+        <!-- Action Buttons -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <button onclick="copyText('pt')" class="group relative flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0">
+                <i class="fa-regular fa-copy text-xl"></i>
+                <span class="text-base">نسخ النص البرتغالي</span>
+                <span class="absolute top-2 left-2 text-[10px] bg-white/20 px-2 py-0.5 rounded text-white font-mono">PT</span>
+            </button>
+
+            <button onclick="copyText('en')" class="group relative flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0">
+                <i class="fa-regular fa-copy text-xl"></i>
+                <span class="text-base">نسخ النص الإنجليزي</span>
+                <span class="absolute top-2 left-2 text-[10px] bg-white/20 px-2 py-0.5 rounded text-white font-mono">EN</span>
+            </button>
+
+            <button onclick="copyText('ar')" class="group relative flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0">
+                <i class="fa-regular fa-copy text-xl"></i>
+                <span class="text-base">نسخ النص العربي</span>
+                <span class="absolute top-2 left-2 text-[10px] bg-white/20 px-2 py-0.5 rounded text-white font-mono">AR</span>
+            </button>
+        </div>
+
+        <!-- Message Cards Container -->
+        <div class="space-y-6">
+            
+            <!-- Portuguese Card -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200/80 overflow-hidden">
+                <div class="bg-slate-50 border-b border-slate-100 px-6 py-3 flex justify-between items-center">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                        <h2 class="font-bold text-slate-700 text-sm md:text-base">النسخة البرتغالية (Portuguese)</h2>
+                    </div>
+                    <button onclick="copyText('pt')" class="text-xs text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 font-semibold px-3 py-1.5 rounded-lg border border-emerald-200 transition">
+                        <i class="fa-regular fa-copy ml-1"></i> نسخ
+                    </button>
+                </div>
+                <div class="p-6 en-text text-slate-700 whitespace-pre-line leading-relaxed text-sm md:text-base" id="text-pt">Assunto: Acesso às Unidades Curriculares no Canvas - Samer Al Saadni (50049405)
+
+Exmos.(as) Senhores(as) do Suporte de IT,
+
+Espero que este e-mail os encontre bem.
+
+Venho por este meio comunicar que as seguintes unidades curriculares nas quais estou inscrito não estão a aparecer na minha plataforma Canvas:
+
+1. Business and Management Cases Analysis
+2. Operations Management
+
+Agradeço desde já a atenção prestada e solicito, por favor, a resolução desta situação com a maior brevidade possível.
+
+Com os melhores cumprimentos,
+Samer Guda Al Saadni
+Número de Estudante: 50049405</div>
+            </div>
+
+            <!-- English Card -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200/80 overflow-hidden">
+                <div class="bg-slate-50 border-b border-slate-100 px-6 py-3 flex justify-between items-center">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                        <h2 class="font-bold text-slate-700 text-sm md:text-base">النسخة الإنجليزية (English)</h2>
+                    </div>
+                    <button onclick="copyText('en')" class="text-xs text-blue-700 hover:text-blue-800 bg-blue-50 hover:bg-blue-100 font-semibold px-3 py-1.5 rounded-lg border border-blue-200 transition">
+                        <i class="fa-regular fa-copy ml-1"></i> نسخ
+                    </button>
+                </div>
+                <div class="p-6 en-text text-slate-700 whitespace-pre-line leading-relaxed text-sm md:text-base" id="text-en">Subject: Access to Course Units on Canvas - Samer Al Saadni (50049405)
+
+Dear IT Support Team,
+
+I hope this email finds you well.
+
+I am writing to inform you that the following course units in which I am enrolled are not appearing on my Canvas platform:
+
+1. Business and Management Cases Analysis
+2. Operations Management
+
+Thank you in advance for your attention, and I kindly request the resolution of this issue as soon as possible.
+
+Best regards,
+Samer Guda Al Saadni
+Student ID: 50049405</div>
+            </div>
+
+            <!-- Arabic Card -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200/80 overflow-hidden">
+                <div class="bg-slate-50 border-b border-slate-100 px-6 py-3 flex justify-between items-center">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-purple-500"></span>
+                        <h2 class="font-bold text-slate-700 text-sm md:text-base">النسخة العربية (Arabic)</h2>
+                    </div>
+                    <button onclick="copyText('ar')" class="text-xs text-purple-700 hover:text-purple-800 bg-purple-50 hover:bg-purple-100 font-semibold px-3 py-1.5 rounded-lg border border-purple-200 transition">
+                        <i class="fa-regular fa-copy ml-1"></i> نسخ
+                    </button>
+                </div>
+                <div class="p-6 text-slate-700 whitespace-pre-line leading-relaxed text-sm md:text-base" id="text-ar">الموضوع: الوصول إلى المواد الدراسية على منصة Canvas - سامر السعدني (50049405)
+
+السادة محترمو قسم الدعم الفني وتكنولوجيا المعلومات،
+
+أتمنى أن تكونوا بخير.
+
+أود إبلاغكم بأن المواد الدراسية التالية المسجل بها لا تظهر على حسابي في منصة Canvas:
+
+1. تحليل حالات إدارة الأعمال (Business and Management Cases Analysis)
+2. إدارة العمليات (Operations Management)
+
+شاكراً لكم حسن تعاونكم واهتمامكم، وأرجو معالجة هذه المشكلة في أقرب وقت ممكن.
+
+مع خالص التحيات والتقدير،
+سامر جودة السعدني
+رقم الطالب: 50049405</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-xl shadow-2xl flex items-center gap-3 opacity-0 pointer-events-none translate-y-4 z-50">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+        <span id="toast-msg" class="text-sm font-medium">تم نسخ النص بنجاح!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-xs text-slate-500 mt-12 mb-4">
+        سامر جودة السعدني &copy; 2026 - طالب رقم 50049405
+    </footer>
+
+    <script>
+        function copyText(lang) {
+            const textElement = document.getElementById(`text-${lang}`);
+            if (!textElement) return;
+
+            const textToCopy = textElement.innerText;
+
+            // Fallback copy execution for iFrames / limited permissions
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                document.execCommand('copy');
+                
+                let langName = '';
+                if(lang === 'pt') langName = 'البرتغالي';
+                else if(lang === 'en') langName = 'الإنجليزي';
+                else if(lang === 'ar') langName = 'العربي';
+
+                showToast(`تم نسخ النص ${langName} إلى الحافظة!`);
+            } catch (err) {
+                showToast('تعذر النسخ تلقائياً، يرجى التحديد والنسخ يدوياً.');
+            } finally {
+                document.body.removeChild(textarea);
+            }
+        }
+
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            
+            toastMsg.innerText = message;
+            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
